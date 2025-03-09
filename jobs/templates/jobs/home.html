@@ -13,16 +13,18 @@
 
 <div class="row pt-4 mt-3 mb-3">
   <h2 class="jumbotron-heading"><b>New Album!!!</b></h2>
+  <div class="row">
   <p><strong>Norm-Core: Your Perfected Self</strong> is out now!</p>
+  </div>
 </div>
 
 <div class="row">
   <div class="col-md-6 mr-5">
     <div class="row mb-4">
-        <a href="{% url 'listen' %}"><img src="{% static 'normcorecover.png' %}" class="img-fluid" height="auto" /></a>
+        <a href="{% url 'listen' %}"><img src="{% static 'normcorecover.png' %}" class="img-fluid" style="max-height: 400px;"/></a>
       </div>
     </div>
-  <div class="col-md-6">
+  <div class="col">
     <div class="row pb-3 ml-5">
       <p class="lead text-muted">Listen/Buy:</p>
     </div>
