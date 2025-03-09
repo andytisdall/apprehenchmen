@@ -1,51 +1,36 @@
-{% extends 'base.html' %}
-{% block content %}
-{% load static %}
-<div class='row'>
+{% extends 'base.html' %} {% block content %} {% load static %}
+<div class="row">
   <h1>Get in Touch</h1>
 </div>
-<br><br>
+<br /><br />
 
 <div class="ml-5">
-  <div class='row pt-2 ml-2'>
-      <h4><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h4>
+  <div class="row pt-2 ml-2">
+    <h4>
+      <a href="mailto:apprehenchmen@gmail.com">apprehenchmen@gmail.com</a>
+    </h4>
   </div>
 </div>
 
-<div class='row pt-5 ml-5'>  
-  <a href='http://instagram.com/apprehenchmen' target='_blank'>
-      <img src="{% static 'instagram.jpg' %}" width=40px />
+<div class="row pt-5 ml-5">
+  <a href="http://instagram.com/apprehenchmen" target="_blank">
+    <img src="{% static 'instag.png' %}" width="40px" />
   </a>
 </div>
-<br><br>
-<div class='row justify-content-left'>
+<br /><br />
+<div class="row justify-content-left">
   <h4>Join the Apprehenchmen Mailing List!</h4>
 </div>
-<div class='row justify-content-left'>
-  <p>We'll tell you about new shows and albums, but not unless it's something actually cool.</p>
+<div class="row justify-content-left">
+  <p>
+    We'll tell you about new shows and albums, but not unless it's something
+    actually cool.
+  </p>
 </div>
-  {% if failure %}
-<div class="alert alert-danger" role="alert">
-  {{ failure }}
-</div>
-  {% elif success %}
-<div class="alert alert-success" role="alert">
-  {{ success }}
-</div>
-  {% endif %}
-<br>
-<div class='row justify-content-left ml-5'>
-    <form method="POST" action="{% url 'contact' %}" enctype="multipart/form-data">
-
-    {% csrf_token %}
-
-    <p align='left'>Your name:
-    <input type="text" name="name" /></p>
-    <p align='left'>Your email address:
-    <input type="text" name="email" /></p>
-    <br>
-    <input class="btn btn-primary" type='submit' value="Get on the list" />
-
-    </form>
-</div>
+{% if failure %}
+<div class="alert alert-danger" role="alert">{{ failure }}</div>
+{% elif success %}
+<div class="alert alert-success" role="alert">{{ success }}</div>
+{% endif %}
+<br />
 {% endblock %}
