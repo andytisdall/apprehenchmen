@@ -8,81 +8,88 @@
 </div>
 
 <div class="row">
-  <div class="row">
-    <h3 class="mb-5">Norm-Core: Your Perfected Self</h3>
+  <div class="col-md-6">
+    <div class="row">
+      <h3 class="mb-5">Norm-Core: Your Perfected Self</h3>
+    </div>
+    <div class="row">
+      <img
+        src="{{ norm.image.url }}"
+        class="img-fixed"
+        width="60%"
+        height="60%"
+        alt="Norm-Core cover"
+      />
+    </div>
+    <br /><br />
+    {%for song in norm_lyrics.all%}
+    <div class="row">
+      <h5>
+        {{ song.track_no }}
+        <a href="{% url 'detail' song.title %}">{{song.title}}</a>
+      </h5>
+      <br />
+      <br />
+    </div>
+    {%endfor%}
   </div>
-  <div class="row">
-    <img
-      src="{{ norm.image.url }}"
-      class="img-fixed"
-      width="60%"
-      height="60%"
-      alt="Norm-Core cover"
-    />
-  </div>
-  <br /><br />
-  {%for song in norm_lyrics.all%}
-  <div class="row">
-    <h5>
-      {{ song.track_no }}
-      <a href="{% url 'detail' song.title %}">{{song.title}}</a>
-    </h5>
-    <br />
-    <br />
-  </div>
-  {%endfor%}
 </div>
 
 <div class="row">
-  <div class="row">
-    <h3 class="mb-5">Murder Eyes</h3>
+  <div class="col-md-6">
+    <div class="row">
+      <h3 class="mb-5">Murder Eyes</h3>
+    </div>
+    <div class="row">
+      <img
+        src="{{ murder.image.url }}"
+        class="img-fixed"
+        width="60%"
+        height="60%"
+        alt="Murder Eyes cover"
+      />
+    </div>
+    <br /><br />
+    {%for song in murder_lyrics.all%}
+    <div class="row">
+      <h5>
+        {{ song.track_no }}
+        <a href="{% url 'detail' song.title %}">{{song.title}}</a>
+      </h5>
+      <br />
+      <br />
+    </div>
+    {%endfor%}
   </div>
-  <div class="row">
-    <img
-      src="{{ murder.image.url }}"
-      class="img-fixed"
-      width="60%"
-      height="60%"
-      alt="Murder Eyes cover"
-    />
-  </div>
-  <br /><br />
-  {%for song in murder_lyrics.all%}
-  <div class="row">
-    <h5>
-      {{ song.track_no }}
-      <a href="{% url 'detail' song.title %}">{{song.title}}</a>
-    </h5>
-    <br />
-    <br />
-  </div>
-  {%endfor%}
 </div>
 
 <div class="row">
-  <div class="row">
-    <h3 class="mb-5">Dress to Disappear</h3>
+  <div class="col-md-6">
+    <div class="row">
+      <h3 class="mb-5">Dress to Disappear</h3>
+    </div>
+    <div class="row">
+      <img
+        src="{{ dress.image.url }}"
+        class="img-fixed"
+        width="60%"
+        height="60%"
+        alt="Dress to Disappear cover"
+      />
+    </div>
+    <br /><br />
+    {%for song in dress_lyrics.all%}
+    <div class="row">
+      <h5>
+        {{ song.track_no }}
+        <a href="{% url 'detail' song.title %}">{{song.title}}</a>
+      </h5>
+      <br />
+      <br />
+    </div>
+
+    {%endfor%}
   </div>
-  <div class="row">
-    <img
-      src="{{ dress.image.url }}"
-      class="img-fixed"
-      width="60%"
-      height="60%"
-      alt="Dress to Disappear cover"
-    />
-  </div>
-  <br /><br />
-  {%for song in dress_lyrics.all%}
-  <div class="row">
-    <h5>
-      {{ song.track_no }}
-      <a href="{% url 'detail' song.title %}">{{song.title}}</a>
-    </h5>
-    <br />
-    <br />
-  </div>
-  {%endfor%}
 </div>
 
 {% endblock %}
