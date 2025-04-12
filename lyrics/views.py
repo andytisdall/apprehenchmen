@@ -11,9 +11,12 @@ def lyrics(request):
         album__title="Murder Eyes").order_by('track_no')
     dress_lyrics = Lyrics.objects.filter(
         album__title="Dress to Disappear").order_by('track_no')
+    norm_lyrics = Lyrics.objects.filter(
+        album__title="Norm-Core: Your Perfected Self").order_by('track_no')
     dress = get_object_or_404(Album, title="Dress to Disappear")
     murder = get_object_or_404(Album, title="Murder Eyes")
-    return render(request, 'lyrics/all_lyrics.html', {'lyrics': lyrics, 'dress': dress, 'murder': murder, 'murder_lyrics': murder_lyrics, 'dress_lyrics': dress_lyrics})
+    norm = get_object_or_404(Album, title="Norm-Core: Your Perfected Self")
+    return render(request, 'lyrics/all_lyrics.html', {'lyrics': lyrics, 'dress': dress, 'murder': murder, 'norm': norm, 'murder_lyrics': murder_lyrics, 'dress_lyrics': dress_lyrics, 'norm_lyrics': norm_lyrics})
 
 
 def detail(request, title):
