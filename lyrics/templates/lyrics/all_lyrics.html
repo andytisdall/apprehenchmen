@@ -56,7 +56,7 @@
       {%for song in murder_lyrics.all%}
       <div class="row pb-2">
         <h5>
-          {{ song.track_no }}
+          {{ song.track_no }} -
           <a href="{% url 'detail' song.title %}">{{song.title}}</a>
         </h5>
       </div>
@@ -85,7 +85,7 @@
       {%for song in dress_lyrics.all%}
       <div class="row pb-2">
         <h5>
-          {{ song.track_no }}
+          {{ song.track_no }} -
           <a href="{% url 'detail' song.title %}">{{song.title}}</a>
         </h5>
       </div>
