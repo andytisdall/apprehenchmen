@@ -1,22 +1,29 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
-<div class="home-container">
-  <div class="home-list">
-    <div class="home-item">Item qith w atitle</div>
+<section class="bg-dark p-4">
+  <div class="home-container">
+    <div class="home-list">
+      <a class="home-item" href="https://apprehenchmen.bandcamp.com">
+        New single <span class="home-item-title">"Canary in the Mine"</span>
+      </a>
 
-    <div class="home-item">Item qith w atitle</div>
+      <a class="home-item" href="{% url 'shows'%}"
+        ><span class="home-item-title">Next Show:</span> 4/18/26 at the Fireside
+        Lounge</a
+      >
 
-    <div class="home-item">Item qith w atitle</div>
+      <a class="home-item" href="{% url 'listen'%}">
+        <span class="home-item-title">Norm-Core: Your Perfected Self</span>
+        album out now
+      </a>
 
-    <div class="home-item">Item qith w atitle</div>
+      <div class="home-item">
+        <span class="home-item-title">Video:</span> "Tonberry" live at the
+        Fireside Lounge
+      </div>
 
-    <div class="home-item">Item qith w atitle</div>
-
-    <div class="home-item">Item qith w atitle</div>
-
-    <div class="home-item">Item qith w atitle</div>
-
-    <div class="home-item">Item qith w atitle</div>
+      <div class="home-item">Buy Merch</div>
+    </div>
   </div>
-</div>
+</section>
 
 {% endblock %}
