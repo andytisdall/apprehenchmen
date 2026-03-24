@@ -23,7 +23,8 @@ import lyrics.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', jobs.views.home, name='home'),
+    path('blog', jobs.views.home, name='blog'),
+    path('', jobs.views.blog, name='home'),
     path('contact/', jobs.views.contact, name='contact'),
     path('lyrics/', include('lyrics.urls')),
     path('about/', jobs.views.about, name='about'),

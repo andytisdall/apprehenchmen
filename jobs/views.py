@@ -8,6 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def home(request):
     return render(request, 'jobs/home.html')
 
+def blog(request):
+    return render(request, 'jobs/blog.html')
 
 def listen(request):
     return render(request, 'jobs/listen.html')
